@@ -39,6 +39,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     arel (5.0.0)
     atomic (1.1.16)
     builder (3.2.2)
@@ -90,6 +91,9 @@ GEM
       websocket-driver (>= 0.2.0)
     polyglot (0.3.4)
     rack (1.5.2)
+    rack-canonical-host (0.0.9)
+      addressable
+      rack (~> 1.0)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.0.rc2)
@@ -206,6 +210,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   pg
   poltergeist
+  rack-canonical-host
   rails (~> 4.1.0.rc2)
   rails-assets-jquery
   rails-assets-jquery-ujs-standalone

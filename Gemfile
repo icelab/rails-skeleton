@@ -13,6 +13,9 @@ gem "pg"
 # Web server
 gem "unicorn"
 
+# # Rack middleware
+gem "rack-canonical-host"
+
 # Views
 gem "jbuilder", "~> 2.0"
 gem "slim-rails"
