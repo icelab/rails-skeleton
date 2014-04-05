@@ -26,6 +26,7 @@ gem "bugsnag"
 # Frontend
 gem "asset_sync"
 gem "coffee-rails", "~> 4.0.0"
+gem "react-rails", github: "reactjs/react-rails"
 gem "sass-rails", "~> 4.0.2"
 gem "turbolinks"
 gem "uglifier", ">= 1.3.0"

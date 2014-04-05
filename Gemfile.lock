@@ -9,6 +9,15 @@ GIT
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
 
+GIT
+  remote: git://github.com/reactjs/react-rails.git
+  revision: 46c3f707c0c6337226328bbad5ea8afd1d0298a8
+  specs:
+    react-rails (1.0.0.pre)
+      execjs
+      rails (>= 3.1)
+      react-source (= 0.9.0)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -204,6 +213,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
+    react-source (0.9.0)
     rspec (3.0.0.beta2)
       rspec-core (= 3.0.0.beta2)
       rspec-expectations (= 3.0.0.beta2)
@@ -253,7 +263,7 @@ GEM
     spring (1.1.2)
     spring-commands-rspec (1.0.1)
       spring (>= 0.9.1)
-    sprockets (2.11.0)
+    sprockets (2.8.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -315,6 +325,7 @@ DEPENDENCIES
   rails-assets-viewloader
   rails_12factor
   rb-fsevent
+  react-rails!
   rspec-rails (~> 3.0.0.beta2)
   sass-rails (~> 4.0.2)
   shoulda-matchers
