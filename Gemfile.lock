@@ -271,6 +271,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 2.0)
   launchy
+  minitest
   pg
   poltergeist
   quiet_assets

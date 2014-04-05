@@ -35,11 +35,12 @@ group :production do
 end
 
 group :test do
-  gem "capybara", github: "jnicklas/capybara" # Rspec 3 deprecations, waiting for the next gem release.
+  gem "capybara", github: "jnicklas/capybara" # RSpec 3 deprecations, waiting for the next gem release.
   gem "database_cleaner"
   gem "factory_girl_rails"
   gem "fuubar", "~> 2.0.0.beta1"
   gem "poltergeist"
+  gem "minitest" # Remove this after https://github.com/thoughtbot/shoulda-matchers/issues/408 is fixed.
   gem "shoulda-matchers"
   gem "simplecov", "~> 0.7.1" # https://github.com/colszowka/simplecov/issues/281
 end
