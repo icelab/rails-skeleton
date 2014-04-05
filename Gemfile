@@ -20,6 +20,9 @@ gem "rack-canonical-host"
 gem "jbuilder", "~> 2.0"
 gem "slim-rails"
 
+# Integrations
+gem "bugsnag"
+
 # Frontend
 gem "coffee-rails", "~> 4.0.0"
 gem "sass-rails", "~> 4.0.2"

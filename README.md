@@ -59,3 +59,4 @@ environment variables. These are all optional.
 * `UNICORN_WORKERS` - Number of unicorn workers to spawn (default: development
   1, otherwisee 3) .
 * `UNICORN_BACKLOG` - Depth of unicorn backlog (default: 16).
+* `BUGSNAG_API_KEY` - API key for tracking errors with Bugsnag.
