@@ -13,7 +13,7 @@ gem "pg"
 # Web server
 gem "unicorn"
 
-# # Rack middleware
+# Rack middleware
 gem "rack-canonical-host"
 
 # Views
@@ -63,10 +63,3 @@ group :development do
   gem "guard-livereload"
   gem "rb-fsevent" if `uname` =~ /Darwin/
 end
-
-# Use ActiveModel has_secure_password
-# gem "bcrypt", "~> 3.1.7"
-
-# Use debugger
-# gem "debugger", group: [:development, :test]
-
