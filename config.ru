@@ -15,4 +15,7 @@ if BASIC_AUTH_PASSWORD
   end
 end
 
+# Compress responses
+use Rack::Deflater
+
 run Rails.application
