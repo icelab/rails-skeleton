@@ -152,6 +152,8 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    shoulda-matchers (2.4.0)
+      activesupport (>= 3.0.0)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -217,6 +219,7 @@ DEPENDENCIES
   rails_12factor
   rspec-rails (~> 3.0.0.beta2)
   sass-rails (~> 4.0.2)
+  shoulda-matchers
   simplecov (~> 0.7.1)
   slim-rails
   spring

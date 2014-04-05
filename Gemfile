@@ -40,6 +40,7 @@ group :test do
   gem "factory_girl_rails"
   gem "fuubar", "~> 2.0.0.beta1"
   gem "poltergeist"
+  gem "shoulda-matchers"
   gem "simplecov", "~> 0.7.1" # https://github.com/colszowka/simplecov/issues/281
 end
 
