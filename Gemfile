@@ -15,6 +15,7 @@ gem "unicorn"
 
 # Views
 gem "jbuilder", "~> 2.0"
+gem "slim-rails"
 
 # Frontend
 gem "coffee-rails", "~> 4.0.0"
