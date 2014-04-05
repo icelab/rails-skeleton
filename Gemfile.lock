@@ -187,6 +187,8 @@ GEM
     rails-assets-jquery (1.11.0)
     rails-assets-jquery-ujs-standalone (1.0.0)
       rails-assets-jquery (> 1.7.0)
+    rails-assets-viewloader (0.0.1)
+      rails-assets-jquery (>= 1.4.3)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -310,6 +312,7 @@ DEPENDENCIES
   rails (~> 4.1.0.rc2)
   rails-assets-jquery
   rails-assets-jquery-ujs-standalone
+  rails-assets-viewloader
   rails_12factor
   rb-fsevent
   rspec-rails (~> 3.0.0.beta2)
