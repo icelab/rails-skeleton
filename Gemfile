@@ -26,6 +26,11 @@ gem "uglifier", ">= 1.3.0"
 gem "rails-assets-jquery"
 gem "rails-assets-jquery-ujs-standalone"
 
+# Production
+group :production do
+  gem "rails_12factor"
+end
+
 # Development tools
 group :development do
   gem "spring"
