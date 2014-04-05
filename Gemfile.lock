@@ -74,6 +74,8 @@ GEM
       multi_json (>= 1.2.0)
     json (1.8.1)
     kgio (2.9.2)
+    launchy (2.1.2)
+      addressable (~> 2.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -210,6 +212,7 @@ DEPENDENCIES
   foreman
   fuubar (~> 2.0.0.beta1)
   jbuilder (~> 2.0)
+  launchy
   pg
   poltergeist
   rack-canonical-host

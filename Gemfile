@@ -51,6 +51,7 @@ end
 # Development tools
 group :development do
   gem "foreman"
+  gem "launchy"
   gem "spring"
 end
 
