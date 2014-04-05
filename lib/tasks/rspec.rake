@@ -8,7 +8,7 @@ if defined?(RSpec)
 
   desc "Run factory specs."
   RSpec::Core::RakeTask.new(:factory_specs) do |t|
-    t.pattern = "./spec/factories_spec.rb"
+    t.pattern = "./spec/models/factories_spec.rb"
   end
 
   # Require factory specs to pass before running the rest of the suite
