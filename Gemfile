@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+source "https://rails-assets.org"
 
 # Heroku uses the ruby version to configure your application"s runtime.
 ruby "2.0.0"
@@ -12,15 +13,18 @@ gem "sqlite3"
 # Web server
 gem "unicorn"
 
+# Views
+gem "jbuilder", "~> 2.0"
+
 # Frontend
 gem "coffee-rails", "~> 4.0.0"
-gem "jquery-rails"
 gem "sass-rails", "~> 4.0.2"
 gem "turbolinks"
 gem "uglifier", ">= 1.3.0"
 
-# Views
-gem "jbuilder", "~> 2.0"
+# Rails assets
+gem "rails-assets-jquery"
+gem "rails-assets-jquery-ujs-standalone"
 
 # Development tools
 group :development do
