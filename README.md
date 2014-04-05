@@ -60,3 +60,6 @@ environment variables. These are all optional.
   1, otherwisee 3) .
 * `UNICORN_BACKLOG` - Depth of unicorn backlog (default: 16).
 * `BUGSNAG_API_KEY` - API key for tracking errors with Bugsnag.
+* `ASSETS_AWS_REGION`, `ASSETS_AWS_BUCKET`, `ASSETS_AWS_ACCESS_KEY_ID`,
+  `ASSETS_AWS_SECRET_ACCESS_KEY` - S3 configuration for syncing Rails asset
+  pipeline files when deploying/precompiling.

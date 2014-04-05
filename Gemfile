@@ -24,6 +24,7 @@ gem "slim-rails"
 gem "bugsnag"
 
 # Frontend
+gem "asset_sync"
 gem "coffee-rails", "~> 4.0.0"
 gem "sass-rails", "~> 4.0.2"
 gem "turbolinks"
