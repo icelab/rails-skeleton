@@ -56,6 +56,7 @@ group :development do
   gem "launchy"
   gem "quiet_assets"
   gem "spring"
+  gem "spring-commands-rspec"
 
   # Guard et al
   gem "guard", "~> 2"
