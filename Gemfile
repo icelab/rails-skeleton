@@ -56,6 +56,12 @@ group :development do
   gem "launchy"
   gem "quiet_assets"
   gem "spring"
+
+  # Guard et al
+  gem "guard", "~> 2"
+  gem "guard-rspec"
+  gem "guard-livereload"
+  gem "rb-fsevent" if `uname` =~ /Darwin/
 end
 
 # Use ActiveModel has_secure_password
