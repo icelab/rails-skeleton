@@ -10,6 +10,9 @@ gem "rails", "~> 4.1.0.rc2"
 # Database drivers
 gem "pg"
 
+# Background worker
+gem "que"
+
 # Web server
 gem "unicorn"
 

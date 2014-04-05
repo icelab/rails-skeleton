@@ -28,4 +28,8 @@ after_fork do |server, worker|
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.establish_connection
   end
+
+  # Uncomment this to enable Que worker threads in-process (thereby avoiding a
+  # separate dedicated worker process).
+  # Que.mode = :async
 end
