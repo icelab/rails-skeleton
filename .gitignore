@@ -8,6 +8,7 @@
 /.bundle
 
 # Ignore app config
+/.env
 /config/database.yml
 
 # Ignore all logfiles and tempfiles.
