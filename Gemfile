@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 source "https://rails-assets.org"
 
-# Heroku uses the ruby version to configure your application"s runtime.
+# Heroku uses the ruby version to configure your application's runtime.
 ruby "2.0.0"
 
 # Rails
@@ -29,6 +29,19 @@ gem "rails-assets-jquery-ujs-standalone"
 # Production
 group :production do
   gem "rails_12factor"
+end
+
+group :test do
+  gem "capybara", github: "jnicklas/capybara" # Rspec 3 deprecations, waiting for the next gem release.
+  gem "database_cleaner"
+  gem "factory_girl_rails"
+  gem "fuubar", "~> 2.0.0.beta1"
+  gem "poltergeist"
+  gem "simplecov", "~> 0.7.1" # https://github.com/colszowka/simplecov/issues/281
+end
+
+group :test, :development do
+  gem "rspec-rails", "~> 3.0.0.beta2"
 end
 
 # Development tools
