@@ -28,6 +28,7 @@ gem "bugsnag"
 
 # Frontend
 gem "asset_sync"
+gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.0.0"
 gem "react-rails", github: "reactjs/react-rails"
 gem "sass-rails", "~> 4.0.2"
