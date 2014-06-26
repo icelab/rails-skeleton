@@ -63,3 +63,4 @@ environment variables. These are all optional.
 * `ASSETS_AWS_REGION`, `ASSETS_AWS_BUCKET`, `ASSETS_AWS_ACCESS_KEY_ID`,
   `ASSETS_AWS_SECRET_ACCESS_KEY` - S3 configuration for syncing Rails asset
   pipeline files when deploying/precompiling.
+* `SELENIUM` - enables the selenium driver for javascript-enabled tests. Allows developers to use `binding.pry` in any rspec example to pause and interact with the test.
