@@ -51,6 +51,7 @@ group :test do
   gem "fuubar", "~> 2.0.0.beta1"
   gem "poltergeist"
   gem "minitest" # Remove this after https://github.com/thoughtbot/shoulda-matchers/issues/408 is fixed.
+  gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "simplecov", "~> 0.7.1" # https://github.com/colszowka/simplecov/issues/281
 end
