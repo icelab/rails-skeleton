@@ -26,4 +26,7 @@ if %w(REGION BUCKET ACCESS_KEY_ID SECRET_ACCESS_KEY).all? { |k| ENV["ASSETS_AWS_
     # Fail silently.  Useful for environments such as Heroku.
     config.fail_silently = true
   end
+else
+  # We don't have enough information to configure AssetSync. Disable it instead.
+  AssetSync.config.run_on_precompile = false
 end
