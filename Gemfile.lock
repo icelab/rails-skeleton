@@ -49,6 +49,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    adequate_exposure (0.2.0)
+      activesupport (~> 4.0)
+      railties (~> 4.0)
     arel (5.0.0)
     asset_sync (1.0.0)
       activemodel
@@ -316,6 +319,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  adequate_exposure
   asset_sync
   autoprefixer-rails
   better_errors

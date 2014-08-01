@@ -20,7 +20,8 @@ gem "unicorn"
 gem "rack-canonical-host"
 
 # App
-# (Add core, app-specific dependencies here. Things that don't fit into any sections below)
+gem "adequate_exposure"
+# ... add your main app dependencies here (if they don't fit in the sections below)
 
 # Views
 gem "jbuilder", "~> 2.0"
