@@ -1,0 +1,9 @@
+/ Loading into the <head> _before_ pretty much everything. The idea is that
+/ things we want to be available as soon as possible — domready, metaquery —
+/ should be included here to avoid waiting for an http request
+script
+  / `domready` for modern browsers (IE9+)
+  / https://github.com/ded/domready
+  = Rails.application.assets.find_asset('domready').to_s.html_safe
+  / For supporting legacy browsers (IE8-)
+  / = Rails.application.assets.find_asset('domready-legacy').to_s.html_safe
