@@ -56,16 +56,15 @@ environment variables.
 
 **Optional**
 
-* `HOSTNAME` - Canonical hostname for this application. Other incoming
-  requests will be redirected to this hostname.
-* `BASIC_AUTH_PASSWORD` - Enable basic auth with this password.
-* `BASIC_AUTH_USER` - Set a basic auth username (not required, password
-  enables basic auth).
-* `UNICORN_WORKERS` - Number of unicorn workers to spawn (default: development
-  1, otherwisee 3) .
-* `UNICORN_BACKLOG` - Depth of unicorn backlog (default: 16).
-* `BUGSNAG_API_KEY` - API key for tracking errors with Bugsnag.
 * `ASSETS_AWS_REGION`, `ASSETS_AWS_BUCKET`, `ASSETS_AWS_ACCESS_KEY_ID`,
   `ASSETS_AWS_SECRET_ACCESS_KEY` - S3 configuration for syncing Rails asset
   pipeline files when deploying/precompiling.
+* `BASIC_AUTH_PASSWORD` - Enable basic auth with this password.
+* `BASIC_AUTH_USER` - Set a basic auth username (not required, the password alone enables basic auth).
+* `BUGSNAG_API_KEY` - API key for tracking errors with Bugsnag.
+* `HOSTNAME` - Canonical hostname for this application. Other incoming
+  requests will be redirected to this hostname.
 * `SELENIUM` - enables the selenium driver for javascript-enabled tests. Allows developers to use `binding.pry` in any rspec example to pause and interact with the test.
+* `UNICORN_WORKERS` - Number of unicorn workers to spawn (default: development
+  1, otherwisee 3) .
+* `UNICORN_BACKLOG` - Depth of unicorn backlog (default: 16).
