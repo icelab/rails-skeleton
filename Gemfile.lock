@@ -84,6 +84,8 @@ GEM
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     dotenv (0.10.0)
+    dotenv-rails (0.10.0)
+      dotenv (= 0.10.0)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
@@ -319,6 +321,7 @@ DEPENDENCIES
   capybara!
   coffee-rails (~> 4.0.0)
   database_cleaner
+  dotenv-rails
   factory_girl_rails
   foreman
   fuubar (~> 2.0.0.beta1)

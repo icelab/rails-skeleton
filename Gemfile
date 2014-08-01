@@ -19,6 +19,9 @@ gem "unicorn"
 # Rack middleware
 gem "rack-canonical-host"
 
+# App
+# (Add core, app-specific dependencies here. Things that don't fit into any sections below)
+
 # Views
 gem "jbuilder", "~> 2.0"
 gem "slim-rails"
@@ -57,6 +60,7 @@ group :test do
 end
 
 group :test, :development do
+  gem "dotenv-rails"
   gem "rspec-rails", "~> 3.0.0.beta2"
 end
 
