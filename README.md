@@ -47,10 +47,15 @@ livereload connections. Growl is used for notifications.
 ### Environment Variables
 
 Several common features and operational parameters can be set using
-environment variables. These are all optional.
+environment variables.
+
+**Required**
 
 * `SECRET_KEY_BASE` - Secret key base for verfying signed cookies. Should be
   30+ random characters and secret!
+
+**Optional**
+
 * `HOSTNAME` - Canonical hostname for this application. Other incoming
   requests will be redirected to this hostname.
 * `BASIC_AUTH_PASSWORD` - Enable basic auth with this password.
