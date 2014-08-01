@@ -150,6 +150,9 @@ GEM
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     json (1.8.1)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     kgio (2.9.2)
     launchy (2.1.2)
       addressable (~> 2.3)
@@ -340,6 +343,7 @@ DEPENDENCIES
   guard-rspec
   interactor
   jbuilder (~> 2.0)
+  kaminari
   launchy
   meta-tags
   minitest
