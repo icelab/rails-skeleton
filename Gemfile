@@ -21,6 +21,7 @@ gem "rack-canonical-host"
 
 # App
 gem "adequate_exposure"
+gem "interactor"
 # ... add your main app dependencies here (if they don't fit in the sections below)
 
 # Views
