@@ -57,7 +57,7 @@ group :test do
   gem "capybara", github: "jnicklas/capybara" # RSpec 3 deprecations, waiting for the next gem release.
   gem "database_cleaner"
   gem "factory_girl_rails"
-  gem "fuubar", "~> 2.0.0.beta1"
+  gem "fuubar", "~> 2.0.0"
   gem "poltergeist"
   gem "minitest" # Remove this after https://github.com/thoughtbot/shoulda-matchers/issues/408 is fixed.
   gem "selenium-webdriver"
