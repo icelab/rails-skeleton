@@ -66,5 +66,5 @@ environment variables.
   requests will be redirected to this hostname.
 * `SELENIUM` - enables the selenium driver for javascript-enabled tests. Allows developers to use `binding.pry` in any rspec example to pause and interact with the test.
 * `UNICORN_WORKERS` - Number of unicorn workers to spawn (default: development
-  1, otherwisee 3) .
+  1, otherwise 3).
 * `UNICORN_BACKLOG` - Depth of unicorn backlog (default: 16).
