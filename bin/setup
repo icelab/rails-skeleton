@@ -6,14 +6,23 @@
 bundle install -j4
 
 # Set up staging and production git remotes
-# git remote add staging git@heroku.com:app-prototype-staging.git
-# git remote add production git@heroku.com:app-prototype.git
+#
+# if [ `git remote | egrep -q "^staging$"` ]; then
+#   git remote add staging git@heroku.com:app-prototype-staging.git
+# fi
+# if [ `git remote | egrep -q "^production$"` ]; then
+#   git remote add production git@heroku.com:app-prototype.git
+# fi
 
 # Copy config files into place
-cp .env.example .env
-cp config/database.example.yml config/database.yml
+
+if [ ! -f .env ]; then
+  cp .env.example .env
+fi
+
+if [ ! -f config/database.yml ]; then
+  cp config/database.example.yml config/database.yml
+fi
 
 # Set up database
 bundle exec rake db:setup
-
-
