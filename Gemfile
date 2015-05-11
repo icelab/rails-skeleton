@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-source "https://rails-assets.org"
 
 # Heroku uses the ruby version to configure your application's runtime.
 ruby "2.0.0"
@@ -45,9 +44,11 @@ gem "turbolinks"
 gem "uglifier", ">= 1.3.0"
 
 # Rails assets
-gem "rails-assets-jquery"
-gem "rails-assets-jquery-ujs-standalone"
-gem "rails-assets-viewloader"
+source "https://rails-assets.org" do
+  gem "rails-assets-jquery"
+  gem "rails-assets-jquery-ujs-standalone"
+  gem "rails-assets-viewloader"
+end
 
 group :production do
   gem "rails_12factor"

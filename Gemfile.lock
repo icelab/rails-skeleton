@@ -399,9 +399,9 @@ DEPENDENCIES
   quiet_assets
   rack-canonical-host
   rails (~> 4.1.0)
-  rails-assets-jquery
-  rails-assets-jquery-ujs-standalone
-  rails-assets-viewloader
+  rails-assets-jquery!
+  rails-assets-jquery-ujs-standalone!
+  rails-assets-viewloader!
   rails_12factor
   rb-fsevent
   react-rails!
