@@ -6,6 +6,11 @@ RSpec.describe 'db:sample_data' do
   it 'seeds the database with sample_data - `rake db:sample_data`' do
     expect { task.invoke }.to_not raise_error
   end
+
+  it 'fails in production' do
+    Rails.stub(env: ActiveSupport::StringInquirer.new("production"))
+    expect { task.invoke }.to raise_error(SystemExit)
+  end
 end
 
 RSpec.describe 'db:seed' do
