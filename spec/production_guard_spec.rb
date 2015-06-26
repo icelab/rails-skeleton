@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'db:production_guard' do
+RSpec.describe 'db:schema:load' do
   include_context 'rake'
 
   it 'fails in production' do
@@ -12,7 +12,10 @@ RSpec.describe 'db:production_guard' do
 
   it 'succeeds in production when force="true" is set' do
     allow(Rails).to receive(:env).and_return(ActiveSupport::StringInquirer.new("production"))
+    allow(ENV).to receive(:[])
     allow(ENV).to receive(:[]).with('force').and_return('true')
-    expect { task.invoke }.not_to raise_error
+    silence_stream(STDOUT) do # silencing our console warning
+      expect { task.invoke }.not_to raise_error
+    end
   end
 end
