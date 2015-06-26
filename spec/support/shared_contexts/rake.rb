@@ -15,5 +15,6 @@ shared_context 'rake' do
     Rake.application.rake_require(task_path, [Rails.root.to_s], loaded_files_excluding_current_rake_file)
 
     Rake::Task.define_task(:environment)
+    AppPrototype::Application.load_tasks
   end
 end
