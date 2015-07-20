@@ -21,7 +21,7 @@ if %w(REGION BUCKET ACCESS_KEY_ID SECRET_ACCESS_KEY).all? { |k| ENV["ASSETS_AWS_
 
     # Use the Rails generated 'manifest.yml' file to produce the list of files to
     # upload instead of searching the assets directory.
-    # config.manifest = true
+    config.manifest = true
 
     # Fail silently.  Useful for environments such as Heroku.
     config.fail_silently = true
