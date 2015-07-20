@@ -1,0 +1,49 @@
+{
+  "name": "rails-skeleton",
+  "description": "Asset compilation with webpack",
+  "version": "1.0.0",
+  "author": "Icelab",
+  "repository": {},
+  "dependencies": {
+    "viewloader-icelab": "git://github.com/icelab/viewloader"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^1.2.0",
+    "css-loader": "^0.9.1",
+    "cssnext-loader": "^1.0.1",
+    "del": "^1.1.1",
+    "dotenv": "^1.1.0",
+    "express": "^4.12.1",
+    "extract-text-webpack-plugin": "^0.3.8",
+    "file-loader": "^0.8.1",
+    "gulp": "^3.8.11",
+    "gulp-jsoncombine": "^1.0.2",
+    "gulp-md5": "^0.1.0",
+    "gulp-rev-all": "^0.7.6",
+    "gulp-rev-rails-manifest": "0.0.1",
+    "gulp-tap": "^0.1.3",
+    "html-loader": "^0.3.0",
+    "http-proxy": "^1.8.1",
+    "jshint": "^2.8.0",
+    "jshint-loader": "^0.8.3",
+    "run-sequence": "^1.0.2",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.6.0",
+    "webpack-dev-middleware": "^1.0.11",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "engines": {
+    "node": "0.12.4"
+  },
+  "scripts": {
+    "clean": "rm -rf ./node_modules && npm run clean-build",
+    "clean-build": "rm -rf ./assets/build/*",
+    "start": "node ./assets/development-server.js",
+    "precompile": "node ./assets/precompile.js",
+    "prebuild-development": "npm run clean-build",
+    "build-development": "./node_modules/.bin/webpack --config ./assets/webpack-development.config.js",
+    "prebuild-production": "npm run clean-build",
+    "build-production": "./node_modules/.bin/webpack --config ./assets/webpack-production.config.js -p",
+    "postbuild-production": "npm run precompile"
+  }
+}
