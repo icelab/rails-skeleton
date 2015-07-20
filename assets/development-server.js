@@ -24,6 +24,8 @@ var PROXY_URL        = process.env.ASSETS_PROXY_URL || "http://localhost:3000";
  * Set up the webpack dev middleware with our development configuration file.
  */
 var webpackMiddlewareOptions = {
+  // Disable all output, we’ll configure it further down instead.
+  quiet: true,
   noInfo: true,
   publicPath: "/assets/"
 };
@@ -99,16 +101,32 @@ server.listen(port, function() {
  * Should be on 8080 as the websocket expects that and it can't be configured
  * though we leave it configurable just in case :)
  */
+var compiler = webpack(webpackConfig);
 var devServerOptions = {
   contentBase: BUILD,
   hot: true,
   quiet: false,
-  noInfo: false,
+  noInfo: true,
   publicPath: "/assets/",
   historyApiFallback: true,
   stats: {
-    colors: true
+    assets:       false,
+    assetsSort:   false,
+    cached:       false,
+    chunkModules: false,
+    chunkOrigins: false,
+    chunks:       false,
+    chunksSort:   false,
+    colors:       true,
+    errorDetails: false,
+    hash:         false,
+    modules:      false,
+    modulesSort:  false,
+    reasons:      true,
+    source:       true,
+    timings:      false,
+    version:      false
   }
 };
-var devServer = new WebpackDevServer(webpack(webpackConfig), devServerOptions);
+var devServer = new WebpackDevServer(compiler, devServerOptions);
 devServer.listen(WEBPACK_PORT, "localhost", function() {});
