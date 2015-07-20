@@ -1,0 +1,10 @@
+Description:
+    Generate an a new "target" within our webpack assets setup.
+
+Example:
+    rails generate asset_target NAME
+
+    This will create:
+        assets/targets/NAME/target.js
+        assets/targets/NAME/index.js
+        assets/targets/NAME/index.css
