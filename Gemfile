@@ -37,18 +37,10 @@ gem "asset_sync"
 gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.0.0"
 gem "meta-tags"
-gem "react-rails", github: "reactjs/react-rails"
 gem "redcarpet"
 gem "sass-rails", "~> 4.0.2"
 gem "turbolinks"
 gem "uglifier", ">= 1.3.0"
-
-# Rails assets
-source "https://rails-assets.org" do
-  gem "rails-assets-jquery"
-  gem "rails-assets-jquery-ujs-standalone"
-  gem "rails-assets-viewloader"
-end
 
 group :production do
   gem "rails_12factor"
