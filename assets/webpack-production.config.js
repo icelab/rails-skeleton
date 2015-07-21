@@ -83,7 +83,7 @@ module.exports = {
   // Plugin definitions
   plugins: [
     new webpack.DefinePlugin({
-      PRODUCTION: true
+      DEVELOPMENT: true
     }),
     new ExtractTextPlugin("[name].css", {
       allChunks: true
