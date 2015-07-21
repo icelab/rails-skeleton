@@ -68,6 +68,20 @@ app.use(function(req, res, next) {
   next();
 });
 
+// Handle un-manifested asset requests from Rails
+// If we haven't yet precompiled, Rails tries to find assets in its default
+// directories — images, stylesheets, javascripts — we redirect those all
+// to /assets/ in development
+app.get("/images/*", function(req, res) {
+  res.redirect(req.url.replace(/^\/images\//, "/assets/"));
+});
+app.get("/stylesheets/*", function(req, res) {
+  res.redirect(req.url.replace(/^\/stylesheets\//, "/assets/"));
+});
+app.get("/javascripts/*", function(req, res) {
+  res.redirect(req.url.replace(/^\/javascripts\//, "/assets/"));
+});
+
 // Check each request and proxies misses through to Rails
 app.get("*", function(req, res, next) {
   try {
