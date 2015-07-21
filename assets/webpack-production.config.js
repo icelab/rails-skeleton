@@ -3,12 +3,18 @@ var fs = require("fs");
 var path = require("path");
 var webpack = require("webpack");
 
-
 /**
  * Custom webpack plugins
  */
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+/**
+ * PostCSS packages
+ */
+
+var autoprefixer = require("autoprefixer-core");
+var cssimport = require("postcss-import");
+var cssnext = require("cssnext");
 
 /**
  * General configuration
@@ -80,7 +86,7 @@ module.exports = {
     filename: "[name].js"
   },
 
-  // Plugin definitions
+  // Plugin/loader specific-configuration
   plugins: [
     new webpack.DefinePlugin({
       DEVELOPMENT: true
@@ -90,14 +96,21 @@ module.exports = {
     })
   ],
 
-  // Plugin specific-configuration
-  cssnext: {
-    map: false,
-    compress: false
-  },
-  jshint: {
-    eqnull: true,
-    failOnHint: false
+  postcss: function() {
+    return {
+      defaults: [
+        cssimport({
+          // Add each @import as a dependency so the bundle is rebuilt
+          // when imported files change.
+          onImport: function (files) {
+            files.forEach(this.addDependency);
+          }.bind(this)
+        }),
+        cssnext(),
+        autoprefixer
+      ],
+      cleaner:  [autoprefixer({ browsers: ["last 2 versions"] })]
+    };
   },
 
   // General configuration
@@ -123,7 +136,7 @@ module.exports = {
         test: /\.css$/,
         // The ExtractTextPlugin pulls all CSS out into static files
         // rather than inside the JavaScript/webpack bundle
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!cssnext-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
       }
     ]
   }

@@ -8,9 +8,9 @@
     "viewloader-icelab": "git://github.com/icelab/viewloader"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^1.2.0",
+    "autoprefixer-core": "^5.2.1",
     "css-loader": "^0.9.1",
-    "cssnext-loader": "^1.0.1",
+    "cssnext": "^1.8.1",
     "del": "^1.1.1",
     "dotenv": "^1.1.0",
     "express": "^4.12.1",
@@ -26,6 +26,8 @@
     "http-proxy": "^1.8.1",
     "jshint": "^2.8.0",
     "jshint-loader": "^0.8.3",
+    "postcss-import": "^6.1.1",
+    "postcss-loader": "^0.5.1",
     "run-sequence": "^1.0.2",
     "style-loader": "^0.8.3",
     "webpack": "^1.6.0",
