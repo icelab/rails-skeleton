@@ -128,6 +128,18 @@ var Foo = require("./foo"); // Will look for index.js automatically
 var fooInstance = new Foo();
 ```
 
+#### Debugging
+
+We inject a special constant into the JavaScript environment at build time: `DEVELOPMENT`. This is a boolean that allows you to add *persistent* code you’d only like to run in development:
+
+```js
+if (DEVELOPMENT) {
+  console.warn(obj.property);
+}
+```
+
+^ This will `warn` in development, and *won’t even been compiled* into the production build.
+
 ### Environment Variables
 
 Several common features and operational parameters can be set using
