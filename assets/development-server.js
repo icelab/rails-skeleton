@@ -122,7 +122,7 @@ var devServerOptions = {
     hash:         false,
     modules:      false,
     modulesSort:  false,
-    reasons:      true,
+    reasons:      false,
     source:       true,
     timings:      false,
     version:      false
