@@ -168,6 +168,7 @@ environment variables.
 * `ASSETS_DEVELOPMENT_PORT` — (default: "1234")
 * `ASSETS_WEBPACK_PORT` — (default: "8080")
 * `ASSETS_PROXY_URL` — (default: "http://localhost:3000")
+* `ASSETS_NOTIFIER_ENABLED` – Enables notifications through OSX’s Notification Center (default: true)
 
 ## Deployment
 

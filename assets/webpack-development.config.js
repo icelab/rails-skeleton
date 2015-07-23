@@ -7,6 +7,7 @@ var webpack = require("webpack");
  * Custom webpack plugins
  */
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var WebpackNotifierPlugin = require("webpack-notifier");
 
 /**
  * PostCSS packages
@@ -68,6 +69,28 @@ function createEntries(entries, dir) {
   return entries;
 }
 
+/**
+ * Plugin setup
+ */
+
+var plugins = [
+  new webpack.NoErrorsPlugin(),
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.DefinePlugin({
+    DEVELOPMENT: true
+  }),
+  new ExtractTextPlugin("[name].css", {
+    allChunks: true
+  })
+];
+
+// Enable the webpack notifier plugin unless explicitly disabled in the
+// ENV setup.
+if (process.env.ASSETS_NOTIFIER_ENABLED !== "false") {
+  plugins.push(
+    new WebpackNotifierPlugin({title: "Webpack assets"})
+  );
+}
 
 /**
  * Webpack configuration
@@ -92,16 +115,7 @@ module.exports = {
   },
 
   // Plugin definitions
-  plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      DEVELOPMENT: true
-    }),
-    new ExtractTextPlugin("[name].css", {
-      allChunks: true
-    })
-  ],
+  plugins: plugins,
 
   // Plugin/loader specific-configuration
   cssnext: {
