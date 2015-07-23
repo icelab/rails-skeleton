@@ -86,7 +86,7 @@ var plugins = [
 
 // Enable the webpack notifier plugin unless explicitly disabled in the
 // ENV setup.
-if (process.env.ASSETS_NOTIFIER_ENABLED !== "false") {
+if (process.env.DISABLE_ASSETS_NOTIFIER !== "true") {
   plugins.push(
     new WebpackNotifierPlugin({title: "Webpack assets"})
   );
