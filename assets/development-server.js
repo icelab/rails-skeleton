@@ -8,6 +8,10 @@ var webpackConfig = require("./webpack-development.config.js");
 var webpackDevMiddleware = require("webpack-dev-middleware");
 var WebpackDevServer = require("webpack-dev-server");
 
+if (webpackConfig.entry === undefined) {
+  console.error("!!! No build targets found. Check you have `target.js` files for each one.");
+  return;
+}
 
 /**
  * General configuration
@@ -87,7 +91,7 @@ app.get("*", function(req, res, next) {
   try {
     // Check if a file exists in the webpack bundle's virtual filesystem.
     // This throws an error if path doesn't exist.
-    webpackMiddleware.fileSystem.readFileSync(__dirname + '/build'+req.url)
+    webpackMiddleware.fileSystem.readFileSync(__dirname + '/build'+req.url);
   } catch (e) {
     console.log("Proxying to "+proxyTarget+req.url);
     // Proxy through to Rails if doesn't exist.
