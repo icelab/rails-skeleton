@@ -22,6 +22,7 @@ gem "rack-canonical-host"
 gem "adequate_exposure"
 gem "interactor"
 gem "kaminari"
+gem "memoit" # easy memoization
 gem "responders"
 # ... add your main app dependencies here (if they don't fit in the sections below)
 
