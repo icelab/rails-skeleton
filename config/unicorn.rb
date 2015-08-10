@@ -1,3 +1,5 @@
+# rubocop:disable all
+
 listen_address = if ENV["RACK_ENV"] == "development" && ENV["BOXEN_SOCKET_DIR"].to_s != ""
   ENV["BOXEN_SOCKET_DIR"] + "/app-prototype"
 else

@@ -41,6 +41,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.assets.digest = true
-  config.static_cache_control = 'public, max-age=3600'
-
+  config.static_cache_control = "public, max-age=3600"
 end

@@ -1,5 +1,4 @@
-require "application_responder"
-
+# Internal: Base controller class for application-wide behaviour.
 class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
   respond_to :html

@@ -1,3 +1,4 @@
+# Public: Common text formatting helpers.
 module TextFormattingHelper
   def smartypants_format(text, options = {})
     options = options.reverse_merge(sanitize: true, sanitize_options: {})
