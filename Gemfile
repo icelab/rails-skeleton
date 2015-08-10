@@ -57,6 +57,8 @@ group :development do
   gem "binding_of_caller"
   gem "foreman"
   gem "launchy"
+  gem "pry-byebug"
+  gem "pry-rails"
   gem "spring"
   gem "spring-commands-rspec"
 end
