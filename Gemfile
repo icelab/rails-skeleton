@@ -4,7 +4,7 @@ source "https://rubygems.org"
 ruby "2.2.2"
 
 # Rails
-gem "rails", "~> 4.1.0"
+gem "rails", "~> 4.2.3"
 
 # Database drivers
 gem "pg"
@@ -19,67 +19,43 @@ gem "unicorn"
 gem "rack-canonical-host"
 
 # App
-gem "adequate_exposure"
 gem "interactor"
 gem "kaminari"
-gem "responders"
 # ... add your main app dependencies here (if they don't fit in the sections below)
 
 # Views
-gem "jbuilder", "~> 2.0"
+gem "jbuilder"
+gem "meta-tags"
+gem "redcarpet"
 gem "slim-rails"
 
 # Integrations
 gem "bugsnag"
-
-# Frontend
-gem "asset_sync"
-gem "autoprefixer-rails"
-gem "coffee-rails", "~> 4.0.0"
-gem "meta-tags"
-gem "redcarpet"
-gem "sass-rails", "~> 4.0.2"
-gem "turbolinks"
-gem "uglifier", ">= 1.3.0"
 
 group :production do
   gem "rails_12factor"
 end
 
 group :test do
-  gem "capybara", github: "jnicklas/capybara" # RSpec 3 deprecations, waiting for the next gem release.
+  gem "capybara"
   gem "database_cleaner"
-  gem "factory_girl_rails"
-  gem "fuubar", "~> 2.0.0"
+  gem "factory_girl_rails", "~> 4.5.0"
   gem "poltergeist"
-  gem "minitest" # Remove this after https://github.com/thoughtbot/shoulda-matchers/issues/408 is fixed.
   gem "selenium-webdriver"
   gem "shoulda-matchers"
-  gem "simplecov", "~> 0.7.1" # https://github.com/colszowka/simplecov/issues/281
+  gem "simplecov"
 end
 
 group :test, :development do
   gem "dotenv-rails"
-  gem "rspec-rails", "~> 3.0.0.beta2"
+  gem "rspec-rails", "~> 3.3.3"
 end
 
-# Development tools
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "foreman"
   gem "launchy"
-  gem "quiet_assets"
   gem "spring"
   gem "spring-commands-rspec"
-
-  # Guard et al
-  gem "guard", "~> 2"
-  gem "guard-rspec"
-  gem "guard-livereload"
-end
-
-# Mac-specific development tools
-group :darwin do
-  gem "rb-fsevent"
 end
