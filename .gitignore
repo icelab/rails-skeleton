@@ -11,6 +11,9 @@
 /.env
 /config/database.yml
 
+# Ignore test coverage output
+/coverage
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
