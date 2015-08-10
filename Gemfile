@@ -21,6 +21,7 @@ gem "rack-canonical-host"
 # App
 gem "interactor"
 gem "kaminari"
+gem "memoit" # easy memoization
 # ... add your main app dependencies here (if they don't fit in the sections below)
 
 # Views
