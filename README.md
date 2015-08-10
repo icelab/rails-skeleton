@@ -40,15 +40,6 @@ Again, with coverage for the ruby specs:
 rake spec:coverage
 ```
 
-### Using Guard
-
-Guard is configured to run ruby and jasmine specs, and also listen for
-livereload connections. Growl is used for notifications.
-
-```
-guard
-```
-
 ### Assets
 
 Assets live outside the standard sprockets-based asset pipeline. We’re using webpack to (almost) entirely replace the asset pipeline, though it works in a similar way to the asset pipeline in practice: we’re not creating fancy bundles, just normal static JavaScript and CSS.
