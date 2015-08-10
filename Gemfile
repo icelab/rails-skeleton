@@ -61,6 +61,10 @@ end
 group :test, :development do
   gem "dotenv-rails"
   gem "rspec-rails", "~> 3.0.0.beta2"
+
+  # Code quality checkers
+  gem "bundler-audit", require: false
+  gem "rubocop", require: false
 end
 
 # Development tools

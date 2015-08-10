@@ -1,0 +1,38 @@
+AllCops:
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - assets/**/*
+  RunRailsCops: true
+Metrics/LineLength:
+  Max: 120
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/FirstParameterIndentation:
+  Enabled: false
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  FunctionalMethods:
+    # Defaults:
+    - let
+    - let!
+    - subject
+    - watch
+    # Ours:
+    - default_scope
+    - sequence
+  IgnoredMethods:
+    # Defaults:
+    - lambda
+    - proc
+    - it
+    # Ours:
+    - specify
+    # respond_to formats, which have a strong idiomatic preference for `{ ... }` block delimeters:
+    - atom
+    - html
+    - js
+    - xml
+Style/LambdaCall:
+  Exclude:
+    - app/views/**/*.jbuilder
