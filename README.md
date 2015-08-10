@@ -40,15 +40,6 @@ Again, with coverage for the ruby specs:
 rake spec:coverage
 ```
 
-### Using Guard
-
-Guard is configured to run ruby and jasmine specs, and also listen for
-livereload connections. Growl is used for notifications.
-
-```
-guard
-```
-
 ### Assets
 
 Assets live outside the standard sprockets-based asset pipeline. We’re using webpack to (almost) entirely replace the asset pipeline, though it works in a similar way to the asset pipeline in practice: we’re not creating fancy bundles, just normal static JavaScript and CSS.
@@ -152,9 +143,6 @@ environment variables.
 
 **Optional**
 
-* `ASSETS_AWS_REGION`, `ASSETS_AWS_BUCKET`, `ASSETS_AWS_ACCESS_KEY_ID`,
-  `ASSETS_AWS_SECRET_ACCESS_KEY` - S3 configuration for syncing Rails asset
-  pipeline files when deploying/precompiling.
 * `BASIC_AUTH_PASSWORD` - Enable basic auth with this password.
 * `BASIC_AUTH_USER` - Set a basic auth username (not required, the password alone enables basic auth).
 * `BUGSNAG_API_KEY` - API key for tracking errors with Bugsnag.
