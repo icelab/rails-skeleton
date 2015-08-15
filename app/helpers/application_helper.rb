@@ -1,8 +1,5 @@
 # Public: General purpose helpers.
 module ApplicationHelper
-  # Common helpers sit under lib/helpers
-  include TextFormattingHelper
-
   def development_javascript
     return unless Rails.env.development?
 

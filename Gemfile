@@ -20,6 +20,7 @@ gem "rack-canonical-host"
 
 # App
 gem "interactor"
+gem "intercity_express"
 gem "kaminari"
 gem "memoit" # easy memoization
 # ... add your main app dependencies here (if they don't fit in the sections below)
@@ -27,7 +28,6 @@ gem "memoit" # easy memoization
 # Views
 gem "jbuilder"
 gem "meta-tags"
-gem "redcarpet"
 gem "slim-rails"
 
 # Integrations
