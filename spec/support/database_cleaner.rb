@@ -2,6 +2,8 @@
 # - http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/
 
 RSpec.configure do |config|
+  config.use_transactional_fixtures = false
+
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end

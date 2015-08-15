@@ -3,6 +3,7 @@ AllCops:
     - db/**/*
     - bin/**/*
     - assets/**/*
+    - spec/*_helper.rb
   RunRailsCops: true
 Metrics/LineLength:
   Max: 120
