@@ -8,4 +8,4 @@ Rails.application.load_tasks
 task default: :ci
 
 desc "Run the test suite"
-task ci: %w(spec rubocop bundle_audit)
+task ci: %w(rubocop spec bundle_audit)
