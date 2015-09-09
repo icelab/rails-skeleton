@@ -5,4 +5,4 @@ Capybara.register_driver :poltergeist do |app|
 end
 
 Capybara.default_driver    = :rack_test
-Capybara.javascript_driver = ENV['SELENIUM'] ? :selenium : :poltergeist
+Capybara.javascript_driver = ENV["SELENIUM"] ? :selenium : :poltergeist

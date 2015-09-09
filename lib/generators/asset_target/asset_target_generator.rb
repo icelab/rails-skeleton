@@ -1,5 +1,6 @@
+# Public: Generator for webpack asset targets.
 class AssetTargetGenerator < Rails::Generators::NamedBase
-  source_root File.expand_path('../templates', __FILE__)
+  source_root File.expand_path("../templates", __FILE__)
   def copy_initializer_file
     target_name = file_name.dasherize
     copy_file "target.js", "assets/targets/#{target_name}/target.js"
