@@ -49,7 +49,7 @@ end
 
 group :test, :development do
   gem "dotenv-rails"
-  gem "rspec-rails", "~> 3.3.3"
+  gem "rspec-rails", "~> 3.5.0"
 
   # Code quality checkers
   gem "bundler-audit", require: false
