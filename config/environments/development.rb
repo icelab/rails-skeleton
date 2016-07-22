@@ -63,5 +63,4 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.assets.digest = true
-  config.static_cache_control = "public, max-age=3600"
 end
