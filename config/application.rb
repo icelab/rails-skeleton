@@ -25,6 +25,6 @@ module AppPrototype
     # config.i18n.default_locale = :de
 
     # Add helpers to the load path
-    config.autoload_paths << Rails.root.join("lib", "helpers")
+    config.autoload_paths += %W(#{config.root}/lib #{config.root}/helpers)
   end
 end
