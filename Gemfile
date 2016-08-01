@@ -4,7 +4,7 @@ source "https://rubygems.org"
 ruby "2.2.3"
 
 # Rails
-gem "rails", "~> 4.2.3"
+gem "rails", "~> 5.0.0"
 
 # Database drivers
 gem "pg"
@@ -49,7 +49,7 @@ end
 
 group :test, :development do
   gem "dotenv-rails"
-  gem "rspec-rails", "~> 3.3.3"
+  gem "rspec-rails", "~> 3.5.0"
 
   # Code quality checkers
   gem "bundler-audit", require: false
