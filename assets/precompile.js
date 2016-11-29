@@ -40,7 +40,7 @@ gulp.task("manifest:digest", function(cb) {
 
 
 /**
- * Combine our manifest.json with any Rails-generated ones so we have a single
+ * Combine our .sprockets-manifest.json with any Rails-generated ones so we have a single
  * combined manifest.json at the end. Output them into the `DEST` directory,
  * which should be the standard rails `public/assets` directory
  */
@@ -48,10 +48,9 @@ var finalManifest;
 
 gulp.task("manifest:combine", ["manifest:digest"], function(cb) {
   console.log("Started manifest:combine task");
-  var stream = gulp.src(DEST+"/manifest*")
-    .pipe(gulpJsoncombine("manifest.json", function(data) {
-
-      // Merge the various manifest.json properties together
+  var stream = gulp.src([DEST+"/.sprockets-manifest*", DEST+"/manifest.json"])
+    .pipe(gulpJsoncombine(".sprockets-manifest.json", function(data) {
+      // Merge the various .sprockets-manifest.json properties together
       // jsoncombine gives us an object with the filenames as
       // the top-level keys
       var merged = {
@@ -89,6 +88,7 @@ gulp.task("manifest:clean", ["manifest:combine", "manifest:digest"], function(cb
   console.log("Started manifest:clean");
   del([
     DEST+"/manifest*",
+    DEST+"/.sprockets-manifest*",
     "!"+DEST+"/"+finalManifest
     ], {force: true}, cb);
 });
